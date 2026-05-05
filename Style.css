@@ -1,0 +1,133 @@
+:root {
+    --preto: #0b0b0b;
+    --dourado: #c5a059; /* Tom aproximado do seu logo */
+    --cinza-escuro: #1a1a1a;
+    --branco: #ffffff;
+}
+
+body {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+header {
+    padding: 10px 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.95); 
+    backdrop-filter: blur(5px);
+}
+
+.logo img {
+    max-width: 280px; 
+    
+    height: auto; 
+    
+    padding: 15px 0; 
+    
+    image-rendering: -webkit-optimize-contrast;
+    filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.3));
+}
+
+nav ul {
+    display: flex;
+    gap: 40px; 
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 3px; 
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--dourado);
+}
+
+.hero-shop {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('sua-foto-fundo.jpg');
+    background-size: cover;
+    padding: 100px 5%;
+    text-align: center;
+    border-bottom: 2px solid var(--dourado);
+}
+
+/* Container que segura os cards */
+.grid-produtos {
+    display: grid;
+    /* Aqui diz: crie colunas que se ajustam sozinhas com no mínimo 250px */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+/* Ajuste na imagem para ela não explodir */
+.card-loja img {
+    width: 100%;
+    height: 400px; /* Altura fixa para manter o padrão */
+    object-fit: cover; /* Faz a arte se ajustar sem esticar */
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 50px;
+    color: var(--dourado);
+}
+
+/* Deixar o texto e preço com respiro */
+.info {
+    padding: 20px;
+    text-align: center;
+}
+
+.info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.info span {
+    color: var(--dourado);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+.card-loja:hover {
+    transform: scale(1.03); /* Dá um leve zoom no card */
+    box-shadow: 0 10px 20px rgba(197, 160, 89, 0.2); /* Cria uma sombra dourada suave */
+    transition: all 0.3s ease;
+}
+
+.btn-comprar {
+    display: block;
+    background: transparent;
+    color: var(--dourado);
+    border: 1px solid var(--dourado);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-comprar:hover {
+    background: var(--dourado);
+    color: var(--preto);
+}
+html {
+    scroll-behavior: smooth; /* Deixa a descida suave, não um pulo seco */
+    scroll-padding-top: 250px; /* Ajuste esse valor de acordo com o tamanho do seu Header */
+}
