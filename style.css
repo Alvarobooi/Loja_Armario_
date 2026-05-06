@@ -33,7 +33,7 @@ body {
 }
 
 header {
-    padding: 10px 5%;
+    padding: 1px 1%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,24 +41,24 @@ header {
     top: 0;
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.95); 
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
 }
 
 .logo img {
-    max-width: 280px; 
+    max-width: 190px; 
     
     height: auto; 
     
-    padding: 15px 0; 
+    padding: 1px 0; 
     
     image-rendering: -webkit-optimize-contrast;
-    filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.3));
+    /*filter: drop-shadow(0 0 5px rgba(197, 160, 89, 0.3));*/
 }
 
 
 nav ul {
     display: flex;
-    gap: 40px; 
+    gap: 30px; 
     list-style: none;
     padding: 0;
 }
@@ -109,6 +109,14 @@ h2 {
     color: var(--dourado);
 }
 
+p {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: 20px;
+     color: #fff;
+}
+
 /* Deixar o texto e preço com respiro */
 .info {
     padding: 20px;
@@ -150,6 +158,24 @@ h2 {
     background: var(--dourado);
     color: var(--preto);
 }
+
+.btn-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: 1px solid var(--dourado);
+    color: var(--dourado);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.btn-home:hover {
+    background: var(--dourado);
+    color: black;
+}
+
 html {
     scroll-behavior: smooth; /* Deixa a descida suave, não um pulo seco */
     scroll-padding-top: 250px; /* Ajuste esse valor de acordo com o tamanho do seu Header */
@@ -169,4 +195,49 @@ html {
 .suporte-container p {
     line-height: 1.6; /* Dá um espaço legal entre as linhas do endereço */
     margin-top: 20px;
+}
+
+/* Container que segura a foto e o texto */
+.home-content {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    gap: 50px; /* Espaço entre a foto e o texto */
+    padding: 60px 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o bloco na tela */
+}
+
+/* Inverte a ordem na segunda seção (Torcedor) */
+.home-content.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Ajuste das imagens para não ficarem gigantes */
+.home-image img {
+    max-width: 400px; 
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.2)); /* Sombra dourada leve */
+}
+.home-image-jog img {
+    max-width: 600px; 
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(197, 160, 89, 0.2)); /* Sombra dourada leve */
+}
+
+/* Ajuste do texto */
+.home-text {
+    max-width: 500px;
+    text-align: left;
+}
+
+/* No CELULAR, volta a ficar um embaixo do outro */
+@media (max-width: 768px) {
+    .home-content, .home-content.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-text {
+        text-align: center;
+    }
 }
