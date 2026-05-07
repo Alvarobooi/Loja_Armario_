@@ -9,12 +9,18 @@
 <body>
 <header>
     <div class="logo">
-        <img src="ArmarioMasc.jpeg" alt="Armário Masculino">
+        <img src="Imagens/ArmarioMasc.jpeg" alt="Armário Masculino">
     </div>
     <nav>
     <ul>
         <li><a href="index.html">Início</a></li>
-        <li><a href="times.html">Times</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Times</a>
+            <div class="dropdown-content">
+                <a href="times.html#adulto">Adulto</a>
+                <a href="times.html#infantil">Infantil</a>
+            </div>
+        </li>
         <li><a href="times_ex.html">Times Exclusivas</a></li>
         <li><a href="premium.html">Premium</a></li>
         <li><a href="index.html#categoria-suporte">Suporte</a></li>
@@ -27,20 +33,30 @@
         <p>Sofisticação, Qualidade e Conforto</p>
     </section>
     <div id="categoria-times" class="categoria-conteudo">
-        <h2 id="times">Camisas de Times</h2>
+        <h2 id="adulto">Camisas de Times</h2>
         <section class="grid-produtos">
+
             <div class="card-loja">
-                <img src="Mengo.png" alt="Camisa Flamengo">
+                <img src="Imagens/Palmeiras.png" alt="Camisa Brasil">
                 <div class="info">
-                    <h3>Flamengo - Edição Especial</h3>
-                    <span>R$ 280,00</span>
-                    <!-- O segredo está no data-item -->
-                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Flamengo - Edição Especial">Comprar via WhatsApp</a>
+                    <h3>Palmeiras</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Palmeiras">Comprar via WhatsApp</a>
                 </div>
             </div>
 
             <div class="card-loja">
-                <img src="Flu.png" alt="Camisa Fluminense">
+                <img src="Imagens/Flamengo.png" alt="Camisa Flamengo">
+                <div class="info">
+                    <h3>Flamengo</h3>
+                    <span>R$ 190,00</span>
+                    <!-- O segredo está no data-item -->
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Flamengo">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Fluminense.png" alt="Camisa Fluminense">
                 <div class="info">
                     <h3>Fluminense</h3>
                     <span>R$ 190,00</span>
@@ -49,23 +65,212 @@
             </div>
 
             <div class="card-loja">
-                <img src="Timao.png" alt="Camisa Corinthians">
+                <img src="Imagens/São Paulo.png" alt="Camisa Corinthians">
+                <div class="info">
+                    <h3>São Paulo</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="São Paulo">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Atletico-PR.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Atletico-PR</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Atletico-PR">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Bahia.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Bahia</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Bahia">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Bragantino.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Bragantino</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Bragantino">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Coritiba.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Coritiba</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Coritiba">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/vitoria.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Vitória</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Vitória">Comprar via WhatsApp</a>
+                </div>
+            </div>
+            
+
+            <div class="card-loja">
+                <img src="Imagens/botafogo.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Botafogo</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Botafogo">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Galo.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Galo</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Galo">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Corinthians.png" alt="Camisa Flamengo">
                 <div class="info">
                     <h3>Corinthians</h3>
+                    <span>R$ 190,00</span>
+                    <!-- O segredo está no data-item -->
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Corinthians - Edição Especial">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Flu.png" alt="Camisa Fluminense">
+                <div class="info">
+                    <h3>Fluminense</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Fluminense">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Timao.png" alt="Camisa Corinthians">
+                <div class="info">
+                    <h3>Corinthians Total 90</h3>
                     <span>R$ 190,00</span>
                     <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Corinthians">Comprar via WhatsApp</a>
                 </div>
             </div>
 
             <div class="card-loja">
-                <img src="Brasil.png" alt="Camisa Brasil">
+                <img src="Imagens/Cruzeiro.png" alt="Camisa Brasil">
                 <div class="info">
-                    <h3>Brasil</h3>
+                    <h3>Cruzeiro</h3>
                     <span>R$ 190,00</span>
-                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Brasil">Comprar via WhatsApp</a>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Cruzeiro">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/São Paulo.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>São Paulo</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="São Paulo">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/Vasco.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Vasco</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Vasco">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/palmeiras_tst.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Palmeiras</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Palmeiras">Comprar via WhatsApp</a>
+                </div>
+            </div>
+
+            <div class="card-loja">
+                <img src="Imagens/corintia_tst.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Corinthians</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Corinthians">Comprar via WhatsApp</a>
+                </div>
+            </div>
+            
+            <div class="card-loja">
+                <img src="Imagens/Vasco_tst.png" alt="Camisa Brasil">
+                <div class="info">
+                    <h3>Corinthians</h3>
+                    <span>R$ 190,00</span>
+                    <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Vasco">Comprar via WhatsApp</a>
                 </div>
             </div>
          </section>
+    </div>
+
+    <div>
+        <div id="categoria-times" class="categoria-conteudo">
+        <h2 id="infantil">Camisas de Times Infantil</h2>
+            <sectio class="grid-produtos">
+                <div class="card-loja">
+                    <img src="Imagens/corintia_infantil.png" alt="Camisa Brasil">
+                        <div class="info">
+                            <h3>Corinthians Infantil</h3>
+                            <span>R$ 190,00</span>
+                            <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Corinthians Infantil">Comprar via WhatsApp</a>
+                        </div>
+                </div>
+
+                <div class="card-loja">
+                    <img src="Imagens/Galo_infantil.png" alt="Camisa Brasil">
+                        <div class="info">
+                            <h3>Atlético Mineiro Infantil</h3>
+                            <span>R$ 190,00</span>
+                            <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Atlético Mineiro Infantil">Comprar via WhatsApp</a>
+                        </div>
+                </div>
+
+                <div class="card-loja">
+                    <img src="Imagens/Mengo_infantil.png" alt="Camisa Brasil">
+                        <div class="info">
+                            <h3>Flamengo Infantil</h3>
+                            <span>R$ 190,00</span>
+                            <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Flamengo Infantil">Comprar via WhatsApp</a>
+                        </div>
+                </div>
+
+                <div class="card-loja">
+                    <img src="Imagens/São Paulo_infantil.png" alt="Camisa Brasil">
+                        <div class="info">
+                            <h3>São Paulo Infantil</h3>
+                            <span>R$ 190,00</span>
+                            <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="São Paulo Infantil">Comprar via WhatsApp</a>
+                        </div>
+                </div>
+
+                <div class="card-loja">
+                    <img src="Imagens/Palmeiras_infantil.png" alt="Camisa Brasil">
+                        <div class="info">
+                            <h3>Palmeiras Infantil</h3>
+                            <span>R$ 190,00</span>
+                            <a href="#" target="_blank" class="btn-comprar btn-whats" data-item="Palmeiras Infantil">Comprar via WhatsApp</a>
+                        </div>
+                </div>
+
+            </section>
     </div>
 
     <footer>
