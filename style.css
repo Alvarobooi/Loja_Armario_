@@ -159,9 +159,19 @@ p {
     color: var(--preto);
 }
 
+.home-text {
+    display: flex;
+    flex-direction: column; /* Coloca um embaixo do outro */
+    align-items: center;    /* Centraliza horizontalmente todos os itens */
+    text-align: center;     /* Garante que as linhas do parágrafo fiquem no meio */
+    justify-content: center;
+}
+
 .btn-home {
     display: inline-block;
-    margin-top: 20px;
+    margin: 20px auto 0;
+    margin-top: 20px;      
+    width: fit-content;
     padding: 12px 30px;
     border: 1px solid var(--dourado);
     color: var(--dourado);
@@ -228,6 +238,7 @@ html {
 /* Ajuste do texto */
 .home-text {
     max-width: 500px;
+    text-align: center;
     text-align: left;
 }
 
