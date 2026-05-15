@@ -392,19 +392,20 @@ html {
 }
 
 .titulo-selecoes {
-    color: #c5a059; /* O tom de dourado que você já usa */
-    font-size: 5rem; /* Ajuste o tamanho como preferir */
+    color: #c5a059;
+    /* MÁGICA AQUI: Mínimo 2.5rem no celular, calcula o meio termo, e Máximo 5rem no PC */
+    font-size: clamp(2.5rem, 8vw, 5rem); 
     text-transform: uppercase;
     text-align: center;
     margin: 10px 0;
+    word-break: keep-all; /* Evita que o navegador corte a palavra no meio */
     
-    /* O SEGREDO DA LUZ DOURADA: */
-    /* Criamos várias camadas de sombra para o brilho parecer intenso */
+    /* Mantém o seu text-shadow que ficou top */
     text-shadow: 
-        0 0 5px rgba(197, 160, 89, 0.8),  /* Brilho interno leve */
-        0 0 15px rgba(197, 160, 89, 0.6), /* Aura média */
-        0 0 30px rgba(197, 160, 89, 0.4), /* Brilho expandido */
-        0 0 50px rgba(197, 160, 89, 0.2); /* Luz de fundo suave */
+        0 0 5px rgba(197, 160, 89, 0.8),
+        0 0 15px rgba(197, 160, 89, 0.6),
+        0 0 30px rgba(197, 160, 89, 0.4),
+        0 0 50px rgba(197, 160, 89, 0.2);
 }
 .titulo-eclusivas {
     color: #c5a059; /* O tom de dourado que você já usa */
