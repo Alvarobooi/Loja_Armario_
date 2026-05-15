@@ -43,6 +43,20 @@ function toggleMenu() {
     const nav = document.querySelector('.nav-container');
     nav.classList.toggle('active');
 }
+
+// NOVA FUNÇÃO: Fecha ao clicar fora
+document.addEventListener('click', function(event) {
+    const nav = document.querySelector('.nav-container');
+    const menuToggle = document.querySelector('.menu-toggle');
+    
+    // Se o menu estiver aberto (.active)
+    if (nav.classList.contains('active')) {
+        // Verifica se o clique NÃO foi dentro do menu E NÃO foi no botão de abrir
+        if (!nav.contains(event.target) && !menuToggle.contains(event.target)) {
+            nav.classList.remove('active'); // Fecha o menu
+        }
+    }
+});
 </script>
 
 <main>
