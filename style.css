@@ -8,15 +8,74 @@
     }
 }
 
-/* No CELULAR (Telas pequenas), vira o sistema de abas */
+/* --- ESTILO PARA O BOTÃO HAMBÚRGUER --- */
+.menu-toggle {
+    display: none; /* Escondido no PC */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 3px;
+    background-color: #c5a059; /* Seu dourado */
+    border-radius: 2px;
+}
+
+/* --- REGRAS PARA CELULAR (Telas até 768px) --- */
 @media (max-width: 768px) {
-    .categoria-conteudo {
-        display: none; /* Esconde tudo por padrão no celular */
+    header {
+        position: fixed; /* Fixa o topo */
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        z-index: 1000;
+        background-color: black;
     }
-    
-    /* Mostra a primeira por padrão ao abrir no celular, se quiser */
-    #categoria-times {
-        display: block; 
+
+    .menu-toggle {
+        display: flex; /* Aparece no celular */
+    }
+
+    .nav-container {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Escondido na direita */
+        width: 75%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        padding-top: 100px;
+        transition: 0.4s ease;
+        border-left: 1px solid #c5a059;
+    }
+
+    /* Quando clicar, o menu entra na tela */
+    .nav-container.active {
+        right: 0;
+    }
+
+    .nav-container ul {
+        flex-direction: column; /* Itens um embaixo do outro */
+        align-items: center;
+        gap: 30px;
+    }
+
+    .nav-container ul li a {
+        font-size: 1.2rem;
+    }
+
+    /* Ajuste para o Dropdown no celular não flutuar */
+    .dropdown-content {
+        position: relative;
+        display: block; /* No celular, as sub-opções podem ficar visíveis direto */
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        text-align: center;
     }
 }
 
