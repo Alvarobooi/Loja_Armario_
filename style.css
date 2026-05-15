@@ -26,56 +26,87 @@
 /* --- REGRAS PARA CELULAR (Telas até 768px) --- */
 @media (max-width: 768px) {
     header {
-        position: fixed; /* Fixa o topo */
+        position: fixed;
         top: 0;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 20px;
+        padding: 15px 20px; /* Aumentei o padding do header para dar mais espaço */
         z-index: 1000;
         background-color: black;
     }
 
+    /* AUMENTAMOS A ÁREA DE TOQUE DO BOTÃO HAMBÚRGUER */
     .menu-toggle {
-        display: flex; /* Aparece no celular */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centraliza as barras verticalmente */
+        gap: 6px; /* Espaço entre os risquinhos */
+        width: 44px; /* Largura total do botão (fácil de acertar com o dedão) */
+        height: 44px; /* Altura total do botão */
+        padding: 5px; /* Margem interna para o clique pegar bem nas bordas */
+    }
+
+    /* Deixei os risquinhos um pouco mais imponentes */
+    .menu-toggle .bar {
+        width: 100%; /* Ocupa os 44px disponíveis */
+        height: 4px; /* Risquinho um pouco mais grosso para destacar */
+        background-color: #c5a059;
+        border-radius: 2px;
     }
 
     .nav-container {
         position: fixed;
         top: 0;
-        right: -100%; /* Escondido na direita */
+        right: -100%;
         width: 75%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.98);
-        padding-top: 100px;
+        padding-top: 120px; /* Mais espaço no topo para não sumir atrás do header */
         transition: 0.4s ease;
         border-left: 1px solid #c5a059;
     }
 
-    /* Quando clicar, o menu entra na tela */
     .nav-container.active {
         right: 0;
     }
 
+    /* AUMENTAMOS OS LINKS DE DENTRO DO MENU */
     .nav-container ul {
-        flex-direction: column; /* Itens um embaixo do outro */
+        flex-direction: column;
         align-items: center;
-        gap: 30px;
+        gap: 15px; /* Controle do espaçamento entre blocos */
+    }
+
+    .nav-container ul li {
+        width: 100%; /* Faz a linha toda ser clicável */
+        text-align: center;
     }
 
     .nav-container ul li a {
-        font-size: 1.2rem;
+        font-size: 1.4rem; /* Letra maior para leitura rápida */
+        display: block;
+        padding: 15px 0; /* Cria uma "caixa" invisível gigante em cada link */
+        width: 100%;
+        color: white;
+        text-decoration: none;
     }
 
-    /* Ajuste para o Dropdown no celular não flutuar */
+    /* Ajuste do Dropdown (Adulto / Infantil) para celular */
     .dropdown-content {
         position: relative;
-        display: block; /* No celular, as sub-opções podem ficar visíveis direto */
-        background: transparent;
+        display: block;
+        background: rgba(197, 160, 89, 0.1); /* Um fundo dourado bem sutil para destacar que é sub-menu */
         border: none;
         box-shadow: none;
         text-align: center;
+        margin-top: 10px;
+    }
+
+    .dropdown-content a {
+        font-size: 1.2rem !important;
+        padding: 12px 0 !important; /* Botões do sub-menu também fáceis de clicar */
     }
 }
 
